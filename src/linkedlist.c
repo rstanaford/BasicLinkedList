@@ -4,11 +4,8 @@
  *
  */
 
-
-
 #include <stdlib.h>
 #include "../inc/linkedlist.h"
-
 
 struct Node * InitList() {
 	struct Node *temp;
@@ -18,8 +15,6 @@ struct Node * InitList() {
 
 	return (temp);
 }
-
-
 
 void PrintList(struct Node *Head) {
 
@@ -43,8 +38,6 @@ void PrintList(struct Node *Head) {
 	}
 }
 
-
-
 void AddNode(struct Node *Head, int num) {
 
     struct Node *p_ptr;
@@ -61,8 +54,6 @@ void AddNode(struct Node *Head, int num) {
 	newnode->next = NULL;
 }
 
-
-
 void DeleteList(struct Node *Head) {
 
 	struct Node *p_ptr;
@@ -78,5 +69,4 @@ void DeleteList(struct Node *Head) {
 
 	free(p_ptr);
 }
-
 
