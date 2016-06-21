@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 
+/* Todo: Redesign algorithm to separate the data type from the implementation. */
 
 struct Node {
     int i;
