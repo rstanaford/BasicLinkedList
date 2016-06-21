@@ -8,13 +8,15 @@
 #include "../inc/linkedlist.h"
 
 struct Node * InitList() {
+	
 	struct Node *temp;
-
+	
 	temp = malloc(sizeof(struct Node));
-    temp->next = NULL;
-
+	temp->next = NULL;
+	
 	return (temp);
 }
+
 
 void PrintList(struct Node *Head) {
 
@@ -38,6 +40,7 @@ void PrintList(struct Node *Head) {
 	}
 }
 
+
 void AddNode(struct Node *Head, int num) {
 
     struct Node *p_ptr;
@@ -50,9 +53,10 @@ void AddNode(struct Node *Head, int num) {
 
 	newnode = (struct Node *)malloc(sizeof(struct Node));
 	p_ptr->next = newnode;
-   	newnode->i = num;
+  newnode->i = num;
 	newnode->next = NULL;
 }
+
 
 void DeleteList(struct Node *Head) {
 
