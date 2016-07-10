@@ -1,7 +1,5 @@
 /* Linkedlist.h: Interface for Linked List handling. */
 
-
-
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
