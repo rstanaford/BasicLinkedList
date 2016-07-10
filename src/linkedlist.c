@@ -17,6 +17,7 @@ Node * InitList() {
 	return (temp);
 }
 
+
 void BuildList(Node *Head) {
 
     int i, numNodes;
@@ -31,6 +32,7 @@ void BuildList(Node *Head) {
         AddNode(Head, newnode);
     }
 }
+
 
 void PrintList(Node *Head) {
 
@@ -53,6 +55,7 @@ void PrintList(Node *Head) {
 		getchar();
 	}
 }
+
 
 void AddNode(Node *Head, Node *newnode) {
 
