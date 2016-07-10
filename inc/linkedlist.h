@@ -11,26 +11,29 @@
 
 /* Todo: Redesign algorithm to separate the data type from the implementation. */
 
-struct Node {
+typedef struct Node {
     int i;
     struct Node *next;
-};
+} Node;
 
 
 /* Initialize the list. */
-struct Node * InitList();
+Node * InitList();
+
+/* Ask user for number of nodes and then build the list. */
+void BuildList(Node *Head);
 
 /* Print the contents of the current list. */
-void PrintList(struct Node *Head);
+void PrintList(Node *Head);
 
 /* Add a node to the end of the list. */
-void AddNode(struct Node *Head, int num);
+void AddNode(Node *Head, Node *node);
 
 /* Insert a node at a specified position within the list. */
-void InsertNode(struct Node *Head, int num, int pos);
+void InsertNode(Node *Head, int num, int pos);
 
 /* Remove a node from the list. */
-void DeleteNode(struct Node *Head, int pos);
+void DeleteNode(Node *Head, int pos);
 
 /* Delete the entire list */
-void DeleteList(struct Node *Head);
+void DeleteList(Node *Head);
