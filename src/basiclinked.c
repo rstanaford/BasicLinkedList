@@ -6,22 +6,19 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "../inc/linkedlist.h"
 
 
 
 int main() {
 
-	struct Node *Head;
-	int i;
+	Node *Head;
 
 	Head = InitList();
 	PrintList(Head);	/* Print the initial list */
 
-	/* Build a basic five element list */
-	for (i=1 ; i<501 ; i++) {
-		AddNode(Head, i);
-	}
+    BuildList(Head);
 
 	PrintList(Head);	/* Print the list again */
 	DeleteList(Head);

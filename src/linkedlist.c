@@ -7,23 +7,37 @@
 #include <stdlib.h>
 #include "../inc/linkedlist.h"
 
-struct Node * InitList() {
+Node * InitList() {
+    
+    Node *temp;
 	
-	struct Node *temp;
-	
-	temp = malloc(sizeof(struct Node));
+	temp = malloc(sizeof(Node));
 	temp->next = NULL;
 	
 	return (temp);
 }
 
+void BuildList(Node *Head) {
 
-void PrintList(struct Node *Head) {
+    int i, numNodes;
+    Node *newnode;
 
-    struct Node *p_ptr;
+    printf("How many nodes should be in the list? ");
+    scanf("%d", &numNodes);
+
+    for (i=1; i<=numNodes; i++) {
+        newnode = (Node *)malloc(sizeof(Node));
+        newnode->i = i;
+        AddNode(Head, newnode);
+    }
+}
+
+void PrintList(Node *Head) {
+
+    Node *p_ptr;
 
 	if (Head->next != NULL) {
-    	p_ptr = Head->next;
+        p_ptr = Head->next;
 
     	while (p_ptr != NULL) {
 	    	printf("%d ", p_ptr->i);
@@ -40,27 +54,26 @@ void PrintList(struct Node *Head) {
 	}
 }
 
+void AddNode(Node *Head, Node *newnode) {
 
-void AddNode(struct Node *Head, int num) {
-
-    struct Node *p_ptr;
-    struct Node *newnode;
+    Node *p_ptr;
+    // Node *newnode;
 
 	p_ptr = Head;
 	while (p_ptr->next != NULL) {
 		p_ptr = p_ptr->next;
 	}
 
-	newnode = (struct Node *)malloc(sizeof(struct Node));
+	// newnode = (Node *)malloc(sizeof(Node));
 	p_ptr->next = newnode;
-  newnode->i = num;
+    // newnode->i = num;
 	newnode->next = NULL;
 }
 
 
-void DeleteList(struct Node *Head) {
+void DeleteList(Node *Head) {
 
-	struct Node *p_ptr;
+	Node *p_ptr;
 
 	p_ptr = Head;
 
