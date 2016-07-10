@@ -60,16 +60,13 @@ void PrintList(Node *Head) {
 void AddNode(Node *Head, Node *newnode) {
 
     Node *p_ptr;
-    // Node *newnode;
 
 	p_ptr = Head;
 	while (p_ptr->next != NULL) {
 		p_ptr = p_ptr->next;
 	}
 
-	// newnode = (Node *)malloc(sizeof(Node));
 	p_ptr->next = newnode;
-    // newnode->i = num;
 	newnode->next = NULL;
 }
 
