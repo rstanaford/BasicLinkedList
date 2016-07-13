@@ -18,14 +18,12 @@ _OBJS = linkedlist.o basiclinked.o
 OBJS = $(patsubst %,$(OBJDIR)/%,$(_OBJS))
 
 
-
-
 $(OBJDIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
+
 build: $(OBJS)
 	$(CC) $(CFLAGS) -o $(BINDIR)/$(TARGET) $^ $(LIBS) $(MYLIBS)
-
 
 
 .PHONY: clean
