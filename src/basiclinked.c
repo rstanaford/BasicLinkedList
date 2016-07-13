@@ -12,16 +12,16 @@
 
 
 int main() {
-
-	Node *Head;
-
-	Head = InitList();
-	PrintList(Head);	/* Print the initial list */
-
+    
+    Node *Head;
+    
+    Head = InitList();
+    PrintList(Head);	/* Print the initial list */
+    
     BuildList(Head);
-
-	PrintList(Head);	/* Print the list again */
-	DeleteList(Head);
-
+    
+    PrintList(Head);	/* Print the list again */
+    DeleteList(Head);
+    
     return 0;
 }
